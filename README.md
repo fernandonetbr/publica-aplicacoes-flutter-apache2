@@ -63,6 +63,7 @@ http://seu-dominio
 Copiar
 
 **Conclusão**
+
 Seguindo esses passos, você pode publicar sua aplicação Flutter Web em um VPS com o Apache sem a necessidade de utilizar Nginx, Python ou NodeJS. Certifique-se de que todos os arquivos foram corretamente transferidos e que o Apache está configurado para apontar para o diretório correto onde os arquivos da build foram colocados.
 
 Para garantir que sua aplicação Flutter Web esteja segura e utilize HTTPS, você pode configurar o Apache com um certificado SSL. Uma maneira comum e gratuita de conseguir isso é utilizando o Let's Encrypt, que oferece certificados SSL gratuitos. Aqui está um guia passo a passo para configurar HTTPS no Apache usando Let's Encrypt.
