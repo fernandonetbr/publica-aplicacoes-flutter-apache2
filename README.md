@@ -1,6 +1,7 @@
 Publicar uma aplicação Flutter Web em um VPS da Hostinger sem o uso de Nginx, Python e NodeJS pode ser feito utilizando apenas o servidor web Apache, que é comumente suportado por VPSs. Vou guiá-lo através de um processo simples utilizando Apache.
 
 **Passo 1: Preparar o Ambiente no VPS**
+
 Acessar o VPS via SSH:
 Conecte-se ao seu VPS usando um cliente SSH como o PuTTY ou o terminal.
 
@@ -10,7 +11,9 @@ Se o Apache não estiver instalado, você pode instalá-lo com o seguinte comand
 
 sudo apt update
 sudo apt install apache2 -y
+
 **Passo 2: Build da Aplicação Flutter Web**
+
 Build da Aplicação:
 No seu ambiente de desenvolvimento local, dentro do diretório do seu projeto Flutter, execute o comando para gerar os arquivos da build web.
 
@@ -18,6 +21,7 @@ flutter build web
 Isso criará uma pasta build/web contendo os arquivos da sua aplicação web.
 
 **Passo 3: Transferir os Arquivos para o VPS**
+
 Transferir os Arquivos:
 Utilize SCP (Secure Copy Protocol) para transferir os arquivos da build para o VPS. No seu terminal local, execute:
 
@@ -25,6 +29,7 @@ scp -r build/web/* usuario@seu-ip-vps:/caminho/para/diretorio/publico
 Altere /caminho/para/diretorio/publico para o diretório onde você deseja colocar os arquivos no servidor VPS. Normalmente, no Apache, o diretório padrão é /var/www/html.
 
 **Passo 4: Configurar o Apache**
+
 Configurar o Apache:
 Se necessário, edite o arquivo de configuração do Apache para assegurar que ele aponte para o diretório correto onde você colocou os arquivos da build Flutter.
 
@@ -42,6 +47,7 @@ Reiniciar o Apache:
 Após fazer as alterações, reinicie o Apache para aplicar as mudanças.
 
 sudo systemctl restart apache2
+
 **Passo 5: Acessar sua Aplicação**
 Agora, você deve ser capaz de acessar sua aplicação Flutter Web através do endereço IP do seu VPS ou do domínio configurado.
 
@@ -55,6 +61,7 @@ ou
 http://seu-dominio
 
 Copiar
+
 **Conclusão**
 Seguindo esses passos, você pode publicar sua aplicação Flutter Web em um VPS com o Apache sem a necessidade de utilizar Nginx, Python ou NodeJS. Certifique-se de que todos os arquivos foram corretamente transferidos e que o Apache está configurado para apontar para o diretório correto onde os arquivos da build foram colocados.
 
